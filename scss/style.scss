@@ -1,0 +1,127 @@
+@import 'config';
+
+
+.hide{
+    display: none;
+}
+
+body{
+    background-color: $dark-blue
+}
+
+.show{
+    display: flex;
+    flex-direction: column;
+    min-width: min-content;
+    width: 30vw;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background: linear-gradient(to top right,$dark-blue,$blue);
+}
+
+.box{
+    &__star{
+        img{
+            padding: 1rem;
+            border-radius: 5rem;
+            background-color: $blue;
+            margin-bottom: 1rem;
+        }
+    }
+    
+    &__text{
+        padding: 1rem 0 1rem 0;
+
+        h1{
+            margin-bottom: 1rem;
+            color: $white;
+        }
+        p{
+            color: $light-grey;
+        }
+    }
+
+    &__rating{
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 1rem;
+
+        .btn{
+            padding: 0.8rem 1.1rem;
+            border-radius: 100%;
+            background-color: $blue;
+            border:none;    
+            font-weight: bold;
+            color: $light-grey;
+
+            &:hover{
+                background-color: $gray;
+                color: $white;
+                transition: background-color .5s ease, color .5s ease;
+            }
+
+            &:focus{
+                background-color: $orange;
+                color: $white;
+            }
+        }
+    }
+
+    &__btn{
+        padding: 0.4rem;
+        border-radius: 1rem;
+        font-size: 1.1rem;
+        border: none;
+        background-color: $orange;
+        font-weight: bold;
+        color: $white;
+
+        &:hover{
+            background-color: $white;
+            color: $orange;
+            transition: background-color .5s ease, color .5s ease;
+        }
+    }
+
+    &__img{
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+        img{
+            width: 40%;
+        }
+    }
+
+    &__selected{
+        @extend .box__img;
+ 
+        p{
+            white-space: nowrap;
+            padding: 0.3rem 0.8rem;
+            border-radius: 1rem;
+            background-color: $blue;
+            color: $orange;
+        }
+
+    }
+
+    &__text1{
+        @extend .box__img;
+        flex-wrap: wrap;
+        h1{
+            margin-bottom: 1rem;
+            color: $white;
+        }
+        p{
+            color: $light-grey;
+        }
+    }
+}
+
+
+
