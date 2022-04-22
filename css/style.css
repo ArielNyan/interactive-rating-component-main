@@ -44,9 +44,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-width: -webkit-min-content;
-  min-width: -moz-min-content;
-  min-width: min-content;
+  min-width: 350px;
   width: 30vw;
   padding: 2rem;
   border-radius: 1.5rem;
